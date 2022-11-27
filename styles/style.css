@@ -2,7 +2,19 @@
 Reglas generales para todas las paginas
 */
 
-
+/* Paleta general de colores, d = dark; m = medium; l = light */
+:root {
+    --blue-color-d: #072AC8;    /* Primary/Default */
+    --blue-color-m: #43D2FF;    /* Accent */
+    --blue-color-l1: #A2D6F9;   /* Primary/Hover */
+    --blue-color-l2: #D1EDFF;   /* Primary/Tapped */
+    --blue-color-l3: #ECF7FF;   /* Neutral/Light Blue */
+    --grey-color-l: #F4F6FC;    /* Neutral/Light */
+    --grey-color-m: #6B708D;    /* Neutral/Medium */
+    --navyblue: #292E47;;
+    --yellow: #FFC600;
+  }
+  
 h1 {
     font-family: 'Roboto';
     font-style: normal;

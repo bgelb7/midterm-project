@@ -1,0 +1,157 @@
+/*
+Reglas generales para todas las paginas
+*/
+
+
+h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+
+    color: #514D67;
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59px;
+    color: #514D67;
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+    color: #514D67;
+}
+
+h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #514D67;
+}
+
+.bodyIntrotextMedium {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #514D67;
+
+
+}
+
+.bodyIntrotextRegular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+
+
+    color: #514D67;
+}
+
+.headLinetextRegular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    /* identical to box height, or 26px */
+
+
+    color: #514D67;
+}
+
+.headLinetextMedium {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 130%;
+    /* identical to box height, or 22px */
+
+
+    color: #514D67;
+}
+
+.caption1TextRegular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #514D67;
+
+}
+
+.caption2TextRegular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+
+    color: #514D67;
+
+}
+
+body {
+
+    background-color: #F4F6FC;
+}
+
+.buttonStyles {
+
+    background-color: #072AC8;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 130%;
+    color: white;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+.formFieldBackgroundColor {
+
+    background-color: #CFD2DE;
+}
+
+.formFieldStylingfirst3fields {
+
+    width: 100%;
+    height: 70px;
+    border: none;
+}
+
+.formFieldStylingLastField {
+    width: 100%;
+    height: 200px;
+    border: none;
+
+}
+
+/*
+
+Reglas CSS contactus.html
+*/

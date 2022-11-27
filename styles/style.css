@@ -132,6 +132,11 @@ body {
     text-align: center;
 }
 
+/*
+
+Reglas CSS contactus.html (contact us page) 
+*/
+
 .formFieldBackgroundColor {
 
     background-color: #CFD2DE;
@@ -151,7 +156,37 @@ body {
 
 }
 
+
 /*
 
-Reglas CSS contactus.html
+Mediaqueries para (para contactus pagina) IPAD
 */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .formOutterDiv {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+    }
+
+    .sideBySide {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+
+    /*
+
+Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 1025px)
+*/
+
+
+}
+
+@media (min-width: 1025px) {}

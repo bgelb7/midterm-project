@@ -21,40 +21,42 @@
 
 <body>
     <h1>Contact Us</h1>
-    <div>
+    <div formOutterDiv>
         <form>
             <label class="bodyIntrotextRegular" for="fname">Full Name*</label>
             <br>
             <input class="formFieldBackgroundColor formFieldStylingfirst3fields" type="text" id="fname" name="fname"
                 required><br>
 
-            <div>
+            <div class="sideBySide">
+                <div class="sideBySide1">
+                    <label class="bodyIntrotextRegular" for="email">Email</label>
+                    <br>
+                    <input class="formFieldBackgroundColor formFieldStylingfirst3fields" type="email" id="email"
+                        name="email">
+                </div>
 
-                <label class="bodyIntrotextRegular" for="email">Email</label>
-                <br>
-                <input class="formFieldBackgroundColor formFieldStylingfirst3fields" type="email" id="email"
-                    name="email">
+                <div class="sideBySide2">
 
-                <br>
-
-                <label class="bodyIntrotextRegular" for="phone">Phone</label>
-                <br>
-                <input class="formFieldBackgroundColor formFieldStylingfirst3fields" type="tel" id="phone" name="phone"
-                    placeholder="123-45-678">
-
-                <br>
-                <label class="bodyIntrotextRegular" for="phone">Message</label>
-                <br>
-
+                    <label class="bodyIntrotextRegular" for="phone">Phone</label>
+                    <input class="formFieldBackgroundColor formFieldStylingfirst3fields" type="tel" id="phone"
+                        name="phone" placeholder="123-45-678">
+                </div>
             </div>
 
-            <textarea class="formFieldBackgroundColor formFieldStylingLastField" rows="5" cols="33"></textarea>
-
+            <br>
+            <label class="bodyIntrotextRegular" for="phone">Message</label>
             <br>
 
-            <input class="buttonStyles headLinetextMedium" type="submit" value="Submit">
+    </div>
 
-        </form>
+    <textarea class="formFieldBackgroundColor formFieldStylingLastField" rows="5" cols="33"></textarea>
+
+    <br>
+
+    <input class="buttonStyles headLinetextMedium" type="submit" value="Submit">
+
+    </form>
     </div>
 
 </body>

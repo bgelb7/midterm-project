@@ -4,20 +4,65 @@ Reglas generales para todas las paginas
 
 /* Paleta general de colores, d = dark; m = medium; l = light */
 :root {
-    --blue-color-d: #072AC8;    /* Primary/Default */
-    --blue-color-m: #43D2FF;    /* Accent */
-    --blue-color-l1: #A2D6F9;   /* Primary/Hover */
-    --blue-color-l2: #D1EDFF;   /* Primary/Tapped */
-    --blue-color-l3: #ECF7FF;   /* Neutral/Light Blue */
-    --grey-color-l: #F4F6FC;    /* Neutral/Light */
-    --grey-color-m: #6B708D;    /* Neutral/Medium */
-    --navyblue: #292E47;;
+    --blue-color-d: #072AC8;
+    /* Primary/Default */
+    --blue-color-m: #43D2FF;
+    /* Accent */
+    --blue-color-l1: #A2D6F9;
+    /* Primary/Hover */
+    --blue-color-l2: #D1EDFF;
+    /* Primary/Tapped */
+    --blue-color-l3: #ECF7FF;
+    /* Neutral/Light Blue */
+    --grey-color-l: #F4F6FC;
+    /* Neutral/Light */
+    --grey-color-m: #6B708D;
+    /* Neutral/Medium */
+    --navyblue: #292E47;
+    ;
     --yellow: #FFC600;
-  }
-  
+}
+
 html {
     margin: 0;
 }
+
+
+
+/* Header */
+header>div {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Nav-Bar */
+nav {
+    width: 400px;
+}
+
+nav label,
+#hamburger {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
 
 h1 {
     font-family: 'Roboto';

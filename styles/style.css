@@ -4,17 +4,25 @@ Reglas generales para todas las paginas
 
 /* Paleta general de colores, d = dark; m = medium; l = light */
 :root {
-    --blue-color-d: #072AC8;    /* Primary/Default */
-    --blue-color-m: #43D2FF;    /* Accent */
-    --blue-color-l1: #A2D6F9;   /* Primary/Hover */
-    --blue-color-l2: #D1EDFF;   /* Primary/Tapped */
-    --blue-color-l3: #ECF7FF;   /* Neutral/Light Blue */
-    --grey-color-l: #F4F6FC;    /* Neutral/Light */
-    --grey-color-m: #6B708D;    /* Neutral/Medium */
-    --navyblue: #292E47;;
+    --blue-color-d: #072AC8;
+    /* Primary/Default */
+    --blue-color-m: #43D2FF;
+    /* Accent */
+    --blue-color-l1: #A2D6F9;
+    /* Primary/Hover */
+    --blue-color-l2: #D1EDFF;
+    /* Primary/Tapped */
+    --blue-color-l3: #ECF7FF;
+    /* Neutral/Light Blue */
+    --grey-color-l: #F4F6FC;
+    /* Neutral/Light */
+    --grey-color-m: #6B708D;
+    /* Neutral/Medium */
+    --navyblue: #292E47;
+    ;
     --yellow: #FFC600;
-  }
-  
+}
+
 html {
     margin: 0;
 }
@@ -135,6 +143,7 @@ input {
 
     padding: 30px;
     box-sizing: border-box;
+    border: none;
     width: 100%;
 
 }
@@ -296,15 +305,6 @@ CSS para seccion "Do you have any questions*/
     margin: 10%;
 }
 
-.subscribetoEmail {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill-rule='evenodd'%3E%3Cpath d='M16.036 18.455l2.404-2.405 5.586 5.587-2.404 2.404zM8.5 2C12.1 2 15 4.9 15 8.5S12.1 15 8.5 15 2 12.1 2 8.5 4.9 2 8.5 2zm0-2C3.8 0 0 3.8 0 8.5S3.8 17 8.5 17 17 13.2 17 8.5 13.2 0 8.5 0zM15 16a1 1 0 1 1 2 0 1 1 0 1 1-2 0'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat;
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: 10px 1rem;
-
-
-
-}
 
 .questionsCTAButton {
     background-color: #072AC8;
@@ -317,12 +317,34 @@ CSS para seccion "Do you have any questions*/
     text-align: center;
     margin: 5% 0 5% 0;
     border: none;
+    color: white;
 }
 
 .yellowsection h3 {
     text-align: center;
 
 }
+
+.fa-regular {
+
+    position: relative;
+    font-size: 1.3em;
+    z-index: 1;
+    left: 12%;
+    top: 1px;
+    color: #7B7B7B;
+    cursor: pointer;
+
+}
+
+.iconstyles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+
 
 /*
 
@@ -335,11 +357,31 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
 
         display: flex;
         flex-direction: row;
-        gap: 100px;
+        gap: 6%;
         align-items: center;
         align-content: center;
+        width: 100%;
+        justify-content: flex-start;
     }
 
+    input {
+
+        width: fit-content;
+        padding-left: 50px;
+    }
+
+    .fa-regular {
+
+        position: relative;
+        font-size: 1.3em;
+        z-index: 1;
+        left: 20px;
+        top: 1px;
+        color: #7B7B7B;
+        cursor: pointer;
+        width: 0;
+
+    }
 
 }
 
@@ -359,8 +401,36 @@ Mediaqueries para seccion "Do you have any questions " Desktop
         align-content: center;
         align-items: center;
         text-align: center;
-        gap: 100px;
+        gap: 6%;
+        position: relative;
+
+
+
 
     }
+
+    .fa-regular {
+
+        position: relative;
+        font-size: 1.3em;
+        z-index: 1;
+        left: 20px;
+        top: 1px;
+        color: #7B7B7B;
+        cursor: pointer;
+        width: 0;
+
+    }
+
+
+
+    input {
+
+        width: fit-content;
+        padding-left: 50px;
+
+    }
+
+
 
 }

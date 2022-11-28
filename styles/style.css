@@ -280,7 +280,7 @@ Reglas CSS contactus.html (contact us page)
 .clients {
     display: flex;
     flex-wrap: wrap;
-    margin: 35px;
+    margin: 80px 35px 50px 35px;
     justify-content: space-around;
 }
 
@@ -294,7 +294,7 @@ Reglas CSS contactus.html (contact us page)
 
 .projects {
     display: grid;
-    margin: 0px 35px;
+    margin: 0px 35px 70px 35px;
 }
 
 .project1 {
@@ -302,9 +302,14 @@ Reglas CSS contactus.html (contact us page)
     background-color: white;
     width: 80vw;
     margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 15px 20px 20px 20px;
+    margin-bottom: 20px;
+    padding: 15px 20px 40px 20px;
     box-shadow: 20px 20px 50px rgb(201, 201, 201);
+}
+
+.project1 a {
+    text-decoration: none;
+    color: #072AC8;
 }
 
 .project1 img {
@@ -316,18 +321,82 @@ Reglas CSS contactus.html (contact us page)
 /* Testimonials section */
 
 .testimonials {
+    width: 100%;
     background-color: #292E47;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: middle;
+    align-items: center;
     height: 600px;
     color: white;
 }
 
 .testimonials h3 {
-    vertical-align: middle;
+    color: white;
+    width: 80vw;
+    text-align: center;
+}
+
+.testimonials h4 {
+    color: #FBC301;
+    width: 80vw;
+    text-align: center;
+}
+
+.testimonials .headLinetextRegular {
+    color: #43D2FF;
+    padding-top: 20px;
+    line-height: 1px;
+}
+
+.testimonials .caption2TextRegular {
     color: white;
 }
+
+.profile {
+    display: flex;
+    margin-top: 40px;
+}
+
+.profileData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 15px;
+}
+
+.testimonials img {
+    width: 28vw;
+    clip-path: circle(60px);
+}
+
+
+/*Services Section*/
+
+.services {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 35px 70px 35px;
+}
+
+.service {
+    justify-items: center;
+    background-color: white;
+    width: 80vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px 20px 40px 20px;
+    box-shadow: 20px 20px 50px rgb(201, 201, 201);
+}
+
+.service img {
+    clip-path: circle(30px);
+    background-color: #D1EDFF;
+    width: 9vw;
+}
+
+
+/*Cta section */
 
 
 /*

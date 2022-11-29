@@ -2,31 +2,29 @@
 Reglas generales para todas las paginas
 */
 
+/* link importación ROBOTO <= EDAIMON */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap');
+
 /* Paleta general de colores, d = dark; m = medium; l = light */
 :root {
-    --blue-color-d: #072AC8;
-    /* Primary/Default */
-    --blue-color-m: #43D2FF;
-    /* Accent */
-    --blue-color-l1: #A2D6F9;
-    /* Primary/Hover */
-    --blue-color-l2: #D1EDFF;
-    /* Primary/Tapped */
-    --blue-color-l3: #ECF7FF;
-    /* Neutral/Light Blue */
-    --grey-color-l: #F4F6FC;
-    /* Neutral/Light */
-    --grey-color-m: #6B708D;
-    /* Neutral/Medium */
-    --navyblue: #292E47;
-    ;
+    --blue-color-d: #072AC8;    /* Primary/Default */
+    --blue-color-m: #43D2FF;    /* Accent */
+    --blue-color-l1: #A2D6F9;   /* Primary/Hover */
+    --blue-color-l2: #D1EDFF;   /* Primary/Tapped */
+    --blue-color-l3: #ECF7FF;   /* Neutral/Light Blue */
+    --grey-color-l: #F4F6FC;    /* Neutral/Light */
+    --grey-color-m: #6B708D;    /* Neutral/Medium */
+    --navyblue: #292E47;;
     --yellow: #FFC600;
-}
-
+  }
+  
 html {
     margin: 0px;
     padding: 0px;
 }
+
+
+/* Selectores font <= BEN */
 
 h1 {
     font-family: 'Roboto';
@@ -65,6 +63,7 @@ h4 {
 
     color: #514D67;
 }
+
 
 .bodyIntrotextMedium {
     font-family: 'Roboto';
@@ -153,6 +152,136 @@ h4 {
 
     color: #514D67;
 
+}
+
+
+/* Header <= EDAIMON, PENDIENTE */
+
+/* Nav-Bar <= EDAIMON, PENDIENTE */
+
+.circle-logo {
+    display: block;
+    width: 100px;
+}
+
+nav {
+    width: 400px;
+}
+
+nav label,
+#hamburger {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: (var(--grey-color-d));
+}
+
+/* ****************************************** */
+/* ****************************************** */
+/* ************ Media Queries *************** */
+/* ********** for responsiveness ************ */
+/* ****************************************** */
+/* ****************************************** */
+
+@media (max-width: 1024px) {
+    
+}
+@media (max-width: 750px) {
+    header>div {
+        flex-flow: column wrap;
+    }
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav a {
+    color: var(--grey-color-m);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* MENU HAMBURGUER */
+nav label {
+    display: inline-block;
+    color: var(--grey-color-m);
+    font-style: normal;
+    font-size: 2em;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Break down menu items into vertical */
+nav ul li {
+    font-size: 1.5em;
+    text-align: center;
+    border-top: 1px solid var(--grey-color-m);
+    display: block;
+}
+
+/* Toggle menu on click */
+#page-nav ul {
+    display: none;
+}
+
+#page-nav input[type='checkbox']:checked~ul {
+    animation: fadein 2s forwards;
+    display: block;
+}
+
+/* END NAV-BAR <= EDAIMON, PENDIENTE */
+
+/* BANNER PROJECTS <= EDAIMON */
+
+.img-banner {
+    width: 100%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+
+/* Section OTHER PROJECTS <= EDAIMON, PENDIENTE */
+
+.col3-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    align-content: center;
+    height: auto;
+    text-align: left;
+}
+   
+.col1-div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.col1-div-img {
+    max-width: 100%;
+    padding: 10%;
 }
 
 /* para placeholder text formulario (contactus pagina) */
@@ -308,7 +437,6 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
 
         margin: 3% 0;
     }
-
 }
 
 

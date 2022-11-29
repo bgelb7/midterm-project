@@ -147,8 +147,8 @@
             <p class="headLinetextRegular"> Illinois 85486 </p>
 
         </div>
-        <div class="navInfoLists">
-            <ul class="headLinetextMedium">
+        <div class="footerInfoLists">
+            <ul class="headLinetextRegular">
                 <li>
                     Team
 
@@ -164,7 +164,7 @@
 
             </ul>
 
-            <ul class="headLinetextMedium">
+            <ul class="headLinetextRegular">
                 <li>
                     Press
 
@@ -185,5 +185,19 @@
 
 
 </footer>
+
+<script>
+
+    async function fetchProjects() {
+
+        const API_URL = await fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2');
+        const response = await fetch(API_URL);
+        fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2')
+            .then((response) => response.json())
+            .then((data) => console.log(data));
+
+    }
+
+</script>
 
 </html>

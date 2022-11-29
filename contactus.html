@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7bcc306e1e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="/scripts/scripts.js"></script>
+
 
     <title>Document </title>
 </head>
@@ -186,18 +188,6 @@
 
 </footer>
 
-<script>
 
-    async function fetchProjects() {
-
-        const API_URL = await fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2');
-        const response = await fetch(API_URL);
-        fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2')
-            .then((response) => response.json())
-            .then((data) => console.log(data));
-
-    }
-
-</script>
 
 </html>

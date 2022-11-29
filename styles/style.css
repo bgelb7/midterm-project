@@ -6,18 +6,27 @@ Reglas generales para todas las paginas
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap');
 
 /* Paleta general de colores, d = dark; m = medium; l = light */
+
 :root {
-    --blue-color-d: #072AC8;    /* Primary/Default */
-    --blue-color-m: #43D2FF;    /* Accent */
-    --blue-color-l1: #A2D6F9;   /* Primary/Hover */
-    --blue-color-l2: #D1EDFF;   /* Primary/Tapped */
-    --blue-color-l3: #ECF7FF;   /* Neutral/Light Blue */
-    --grey-color-l: #F4F6FC;    /* Neutral/Light */
-    --grey-color-m: #6B708D;    /* Neutral/Medium */
-    --navyblue: #292E47;;
+    --blue-color-d: #072AC8;
+    /* Primary/Default */
+    --blue-color-m: #43D2FF;
+    /* Accent */
+    --blue-color-l1: #A2D6F9;
+    /* Primary/Hover */
+    --blue-color-l2: #D1EDFF;
+    /* Primary/Tapped */
+    --blue-color-l3: #ECF7FF;
+    /* Neutral/Light Blue */
+    --grey-color-l: #F4F6FC;
+    /* Neutral/Light */
+    --grey-color-m: #6B708D;
+    /* Neutral/Medium */
+    --navyblue: #292E47;
+    ;
     --yellow: #FFC600;
-  }
-  
+}
+
 html {
     margin: 0px;
     padding: 0px;
@@ -32,7 +41,6 @@ h1 {
     font-weight: 700;
     font-size: 60px;
     line-height: 70px;
-
     color: #514D67;
 }
 
@@ -60,7 +68,6 @@ h4 {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-
     color: #514D67;
 }
 
@@ -71,10 +78,7 @@ h4 {
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
-
     color: #514D67;
-
-
 }
 
 .bodyIntrotextRegular {
@@ -84,8 +88,6 @@ h4 {
     font-size: 20px;
     line-height: 150%;
     /* identical to box height, or 30px */
-
-
     color: #514D67;
 }
 
@@ -96,8 +98,6 @@ h4 {
     font-size: 17px;
     line-height: 150%;
     /* identical to box height, or 26px */
-
-
     color: #514D67;
 }
 
@@ -125,8 +125,6 @@ h4 {
     font-size: 17px;
     line-height: 130%;
     /* identical to box height, or 22px */
-
-
     color: #514D67;
 }
 
@@ -137,10 +135,7 @@ h4 {
     font-size: 15px;
     line-height: 18px;
     /* identical to box height */
-
-
     color: #514D67;
-
 }
 
 .caption2TextRegular {
@@ -149,9 +144,7 @@ h4 {
     font-weight: 400;
     font-size: 13px;
     line-height: 15px;
-
     color: #514D67;
-
 }
 
 
@@ -287,15 +280,14 @@ nav ul li {
 /* para placeholder text formulario (contactus pagina) */
 
 input {
-
     padding: 30px;
     box-sizing: border-box;
+    width: 100%;
     border: none;
 
 }
 
 ::placeholder {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -308,7 +300,6 @@ input {
 .email::placeholder {}
 
 textarea {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -318,12 +309,10 @@ textarea {
 }
 
 body {
-
     background-color: #F4F6FC;
 }
 
 .buttonStyles {
-
     background-color: #072AC8;
     font-family: 'Roboto';
     font-style: normal;
@@ -338,18 +327,17 @@ body {
     border: none;
 }
 
+
 /*
 
 Reglas CSS contactus.html (contact us page) 
 */
 
 .formFieldBackgroundColor {
-
     background-color: #CFD2DE;
 }
 
 .formFieldStylingfirst3fields {
-
     width: 100%;
     height: 70px;
     border: none;
@@ -359,18 +347,241 @@ Reglas CSS contactus.html (contact us page)
     width: 100%;
     height: 200px;
     border: none;
-
 }
 
 .formOutterDiv {
-
     margin: 10%;
 }
 
 .allFormFields {
-
     margin: 3% 0;
 }
+
+
+/* HOME MOBILE */
+
+
+/* Hero section */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: auto;
+    margin: 50px 35px 50px 35px;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContent h1 {
+    margin-top: 10px;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.heroCta {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px;
+}
+
+.heroCta a {
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.heroCta #heroCta {
+    background-color: #072AC8;
+    text-decoration: none;
+    color: white;
+}
+
+.heroImgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.heroImgs #img1 {
+    width: 80vw;
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.heroImgs #img2 {
+    width: 50vw;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+}
+
+.heroImgs #img3 {
+    width: 50vw;
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 1;
+    align-self: end;
+    margin-bottom: -90px;
+}
+
+
+/* Clients section */
+
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 35px 50px 35px;
+    justify-content: space-around;
+}
+
+.clients img {
+    filter: grayscale(100%);
+    padding: 30px;
+}
+
+
+/* Projects section */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 35px 70px 35px;
+}
+
+.project1 {
+    justify-items: center;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px 20px 40px 20px;
+    box-shadow: 20px 20px 50px rgb(201, 201, 201);
+}
+
+.project1 a {
+    text-decoration: none;
+    color: #072AC8;
+}
+
+.project1 img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Testimonials section */
+
+.testimonials {
+    width: 100%;
+    background-color: #292E47;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    color: white;
+}
+
+.testimonials h3 {
+    color: white;
+    width: 80vw;
+    text-align: center;
+}
+
+.testimonials h4 {
+    color: #FBC301;
+    width: 80vw;
+    text-align: center;
+}
+
+.testimonials .headLinetextRegular {
+    color: #43D2FF;
+    padding-top: 20px;
+    line-height: 1px;
+}
+
+.testimonials .caption2TextRegular {
+    color: white;
+}
+
+.profile {
+    display: flex;
+}
+
+.profileData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 15px;
+}
+
+.testimonials img {
+    width: 150px;
+    clip-path: circle(50px);
+}
+
+
+/*Services Section*/
+
+.services {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 35px 70px 35px;
+}
+
+.service {
+    justify-items: center;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 15px 20px 40px 20px;
+    box-shadow: 20px 20px 50px rgb(201, 201, 201);
+}
+
+.service img {
+    clip-path: circle(30px);
+    background-color: #D1EDFF;
+    width: 9vw;
+}
+
+
+/*Cta section */
+
+.newsletter {
+    background-color: #FBC301;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctaMail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#suscribe {
+    background-color: #072AC8;
+    padding: 30px 20px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
 
 /*
 
@@ -378,64 +589,176 @@ Mediaqueries para (para contactus pagina) IPAD
 */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-
     .formOutterDiv {
         margin: 10%;
     }
-
     .sideBySide {
-
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 4%;
     }
-
-
     .box1 {
         width: 100%;
     }
-
     .allFormFields {
-
         margin: 3% 0;
     }
-
+    /* HOME IPAD */
+    /*Hero section Tablet */
+    .hero {
+        display: flex;
+        flex-direction: column;
+        margin: 50px 35px 50px 35px;
+    }
+    .heroContent h1 {
+        margin: 20px;
+        font-size: 70px;
+        line-height: 90px;
+    }
+    .heroCta a {
+        padding: 30px 20px;
+        width: 150px;
+    }
+    .hero p {
+        margin: 50px;
+    }
+    /*Clients section Tablet */
+    /*Projects section Tablet */
+    .projects h3 {
+        padding-left: 50px;
+    }
+    .project1 {
+        max-width: 340px;
+    }
+    .projectsWrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    /*Testimonials section Tablet*/
+    /*Services section Tablet*/
+    .services h3 {
+        padding-left: 50px;
+    }
+    .servicesItem {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .service {
+        max-width: 340px;
+    }
 }
+
 
 /*
 
 Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 1025px)
 */
 
-
-
-
 @media (min-width: 1025px) {
-
     .formOutterDiv {
         margin: 10%;
     }
-
     .sideBySide {
-
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 4%;
     }
-
-
     .box1 {
         width: 100%;
     }
-
     .allFormFields {
-
         margin: 3% 0;
+    }
+    /*HERO SECTION */
+    .hero {
+        margin: 65px;
+        padding: 0 100px 0 100px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .heroImgs {
+        order: 2;
+        grid-column: 7 / 12;
+    }
+    .heroContent {
+        order: 1;
+        grid-column: 1 / 7;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .heroContent h1 {
+        text-align: start;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+    .heroContent #intro {
+        padding: 0 20px 0 20px;
+    }
+    .heroImgs #img1 {
+        width: 30vw;
+    }
+    .heroImgs #img2 {
+        width: 20vw;
+    }
+    .heroImgs #img3 {
+        width: 20vw;
+    }
+    /*CLIENTS SECTION */
+    .clients {
+        margin: 65px;
+        padding: 0 100px 0 100px;
+    }
+    /*PROJECTS SECTION */
+    .projects {
+        margin: 65px;
+        padding: 0 100px 0 100px;
+    }
+    .projects h3 {
+        padding-left: 50px;
+    }
+    .project1 {
+        max-width: 300px;
+    }
+    .projectsWrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    /*Testimonials section Tablet*/
+    /*Services section Tablet*/
+    .services {
+        margin: 65px;
+        padding: 0 100px 0 100px;
+    }
+    .services h3 {
+        padding-left: 50px;
+    }
+    .servicesItem {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .service {
+        max-width: 300px;
     }
 }
 
@@ -443,6 +766,7 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
 /*
 
 CSS para seccion "Do you have any questions*/
+
 .yellowsection {
     background-color: #FBC301;
     display: flex;
@@ -450,6 +774,13 @@ CSS para seccion "Do you have any questions*/
     align-content: center;
     align-items: center;
     margin: 10%;
+}
+
+.subscribetoEmail {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill-rule='evenodd'%3E%3Cpath d='M16.036 18.455l2.404-2.405 5.586 5.587-2.404 2.404zM8.5 2C12.1 2 15 4.9 15 8.5S12.1 15 8.5 15 2 12.1 2 8.5 4.9 2 8.5 2zm0-2C3.8 0 0 3.8 0 8.5S3.8 17 8.5 17 17 13.2 17 8.5 13.2 0 8.5 0zM15 16a1 1 0 1 1 2 0 1 1 0 1 1-2 0'%3E%3C/path%3E%3C/svg%3E") center / contain no-repeat;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 10px 1rem;
 }
 
 
@@ -469,8 +800,8 @@ CSS para seccion "Do you have any questions*/
 
 .yellowsection h3 {
     text-align: center;
-
 }
+
 
 .fa-regular {
 
@@ -494,6 +825,7 @@ CSS para seccion "Do you have any questions*/
     display: flex;
     flex-direction: column;
 }
+
 
 /*
 
@@ -642,7 +974,6 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
 */
 
     .flex-horizontally {
-
         display: flex;
         flex-direction: row;
         gap: 6%;
@@ -701,6 +1032,7 @@ Mediaqueries para  Desktop
 
 @media (min-width: 1025px) {
 
+
     /*
 
 Mediaqueries para seccion "Do you have any questions " Desktop
@@ -708,7 +1040,6 @@ Mediaqueries para seccion "Do you have any questions " Desktop
 
 
     .flex-horizontally {
-
         display: flex;
         flex-direction: row;
         align-content: center;
@@ -752,5 +1083,4 @@ Mediaqueries para seccion "Do you have any questions " Desktop
         display: block;
         width: 100px;
     }
-
 }

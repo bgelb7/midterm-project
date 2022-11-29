@@ -1,13 +1,11 @@
-<script>
 
-    async function fetchProjects() {
 
-        const API_URL = await fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2');
-    const response = await fetch(API_URL);
-    fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2')
-            .then((response) => response.json())
-            .then((data) => console.log(data));
-
+async function getProjects() {
+    let url = 'https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2';
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
     }
-
-</script>
+}

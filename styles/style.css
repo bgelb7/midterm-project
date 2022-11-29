@@ -150,104 +150,188 @@ h4 {
 
 /* Header <= EDAIMON, PENDIENTE */
 
-/* Nav-Bar <= EDAIMON, PENDIENTE */
+/* Nav-Bar <= EDAIMON */
 
 .circle-logo {
     display: block;
     width: 100px;
+    justify-content: center;
 }
 
-nav {
-    width: 400px;
+
+
+* {
+    font-family: "Roboto";
+    box-sizing: border-box;
 }
 
-nav label,
-#hamburger {
-    display: none;
-}
-
-nav ul {
-    list-style: none;
+.top-nav {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #6B708D;
+    height: 50px;
+    padding: 1em;
+  
+    
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+    padding: 10px;
+    list-style-type: none;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #6B708D;
+    list-style-type: none;
+
+}
+
+
+.button-top {
+    list-style-type: none;
+}
+
+.button-top-nav {
+    display: flex;
+    background-color: #072AC8;
     justify-content: space-around;
+    padding: 7px;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+
+.button-top-nav a {
+    color: white;
+    white-space: nowrap;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: (var(--grey-color-d));
-}
-
-/* ****************************************** */
-/* ****************************************** */
-/* ************ Media Queries *************** */
-/* ********** for responsiveness ************ */
-/* ****************************************** */
-/* ****************************************** */
-
-@media (max-width: 1024px) {
-    
-}
-@media (max-width: 750px) {
-    header>div {
-        flex-flow: column wrap;
-    }
-}
-
-nav {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul {
-    padding: 0;
-}
-
-nav a {
-    color: var(--grey-color-m);
-    font-weight: 500;
-    cursor: pointer;
-}
-
-/* MENU HAMBURGUER */
-nav label {
-    display: inline-block;
-    color: var(--grey-color-m);
-    font-style: normal;
-    font-size: 2em;
-    padding: 10px;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
-/* Break down menu items into vertical */
-nav ul li {
-    font-size: 1.5em;
-    text-align: center;
-    border-top: 1px solid var(--grey-color-m);
-    display: block;
-}
-
-/* Toggle menu on click */
-#page-nav ul {
+#menu-toggle {
     display: none;
 }
 
-#page-nav input[type='checkbox']:checked~ul {
-    animation: fadein 2s forwards;
+.menu-button,
+.menu-button::before,
+.menu-button::after {
     display: block;
+    background-color: #6B708D;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
 }
 
-/* END NAV-BAR <= EDAIMON, PENDIENTE */
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .button-top-nav {
+        display: none;
+        margin: 20px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        border: 0.5px solid #6B708D;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #F4F6FC;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #6B708D;
+    }
+}
+
+/* END NAV-BAR */
 
 /* BANNER PROJECTS <= EDAIMON */
 
 .img-banner {
     width: 100%;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    max-height: 400vh;
+    background-size: cover;
 }
 
 
@@ -262,14 +346,14 @@ nav ul li {
     height: auto;
     text-align: left;
 }
-   
+
 .col1-div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .col1-div-img {
@@ -592,6 +676,7 @@ Mediaqueries para (para contactus pagina) IPAD
     .formOutterDiv {
         margin: 10%;
     }
+
     .sideBySide {
         display: flex;
         flex-direction: row;
@@ -599,12 +684,15 @@ Mediaqueries para (para contactus pagina) IPAD
         align-items: center;
         gap: 4%;
     }
+
     .box1 {
         width: 100%;
     }
+
     .allFormFields {
         margin: 3% 0;
     }
+
     /* HOME IPAD */
     /*Hero section Tablet */
     .hero {
@@ -612,26 +700,32 @@ Mediaqueries para (para contactus pagina) IPAD
         flex-direction: column;
         margin: 50px 35px 50px 35px;
     }
+
     .heroContent h1 {
         margin: 20px;
         font-size: 70px;
         line-height: 90px;
     }
+
     .heroCta a {
         padding: 30px 20px;
         width: 150px;
     }
+
     .hero p {
         margin: 50px;
     }
+
     /*Clients section Tablet */
     /*Projects section Tablet */
     .projects h3 {
         padding-left: 50px;
     }
+
     .project1 {
         max-width: 340px;
     }
+
     .projectsWrap {
         display: flex;
         flex-direction: row;
@@ -640,11 +734,13 @@ Mediaqueries para (para contactus pagina) IPAD
         align-items: center;
         justify-content: center;
     }
+
     /*Testimonials section Tablet*/
     /*Services section Tablet*/
     .services h3 {
         padding-left: 50px;
     }
+
     .servicesItem {
         display: flex;
         flex-direction: row;
@@ -653,6 +749,7 @@ Mediaqueries para (para contactus pagina) IPAD
         align-items: center;
         justify-content: center;
     }
+
     .service {
         max-width: 340px;
     }
@@ -668,6 +765,7 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
     .formOutterDiv {
         margin: 10%;
     }
+
     .sideBySide {
         display: flex;
         flex-direction: row;
@@ -675,12 +773,15 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         align-items: center;
         gap: 4%;
     }
+
     .box1 {
         width: 100%;
     }
+
     .allFormFields {
         margin: 3% 0;
     }
+
     /*HERO SECTION */
     .hero {
         margin: 65px;
@@ -688,10 +789,12 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
     }
+
     .heroImgs {
         order: 2;
         grid-column: 7 / 12;
     }
+
     .heroContent {
         order: 1;
         grid-column: 1 / 7;
@@ -699,39 +802,49 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         justify-content: center;
         align-items: flex-start;
     }
+
     .heroContent h1 {
         text-align: start;
         padding-left: 20px;
         margin-bottom: 10px;
     }
+
     .heroContent #intro {
         padding: 0 20px 0 20px;
     }
+
     .heroImgs #img1 {
         width: 30vw;
     }
+
     .heroImgs #img2 {
         width: 20vw;
     }
+
     .heroImgs #img3 {
         width: 20vw;
     }
+
     /*CLIENTS SECTION */
     .clients {
         margin: 65px;
         padding: 0 100px 0 100px;
     }
+
     /*PROJECTS SECTION */
     .projects {
         margin: 65px;
         padding: 0 100px 0 100px;
     }
+
     .projects h3 {
         padding-left: 50px;
     }
+
     .project1 {
         max-width: 300px;
     }
+
     .projectsWrap {
         display: flex;
         flex-direction: row;
@@ -740,15 +853,18 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         align-items: center;
         justify-content: center;
     }
+
     /*Testimonials section Tablet*/
     /*Services section Tablet*/
     .services {
         margin: 65px;
         padding: 0 100px 0 100px;
     }
+
     .services h3 {
         padding-left: 50px;
     }
+
     .servicesItem {
         display: flex;
         flex-direction: row;
@@ -757,6 +873,7 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         align-items: center;
         justify-content: center;
     }
+
     .service {
         max-width: 300px;
     }

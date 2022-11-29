@@ -10,20 +10,36 @@
 </head>
 <div class="formOutterDiv">
     <header>
-        <img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" />
 
-        <nav id="page-nav">
+
+        <div class="top-nav">
+            <!-- <nav id="page-nav">
             <label for="hamburger">&#9776;</label>
-            <input type="checkbox" id="hamburger" />
+            <input type="checkbox" id="hamburger" /> -->
+            
 
-            <ul>
+
+            <img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" />
+            
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+
+
+            <ul class="menu">
                 <li><a href="/home.html">Home</a></li>
-                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/project.html">Projects</a></li>
                 <li><a href="/services.html">Services</a></li>
-                <li> <button class="buttonStyles"><a href="/contactus.html">Contact Us</a></button></li>
-
             </ul>
-        </nav>
+
+            <ul class="menu button-top-nav">
+                <li><a href="/contactus.html">Contact Us</a></li>
+            </ul>
+
+
+            <!-- <button><a href="/contactus.html" class="button-top-nav">Contact Us</a></button> -->
+        </div>
 
         <h1>Simplify</h1>
         <div class="bodyIntrotextMedium">UI Design & App development</div>
@@ -33,40 +49,40 @@
     </header>
 
     <img class="img-banner" src="/project-assets/projects-section/1.jpg" alt="Projects banner" />
-    
-
-        <p class="bodyIntrotextRegular">
 
 
-            Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw
-            Antwone into a
-            glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better
-            paralyze
-            my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
-
-            The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil
-            men.
-            Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness,
-            for he
-            is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great
-            vengeance
-            and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is
-            the Lord
-            when I lay My vengeance upon thee.
-
-            Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show
-            to the
-            people who make shows, and on the strength of that one show they decide if they're going to make more shows.
-            Some
-            pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones
-            that
-            became nothing.
+    <p class="bodyIntrotextRegular">
 
 
-        </p>
+        Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw
+        Antwone into a
+        glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better
+        paralyze
+        my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
+
+        The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil
+        men.
+        Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness,
+        for he
+        is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great
+        vengeance
+        and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is
+        the Lord
+        when I lay My vengeance upon thee.
+
+        Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show
+        to the
+        people who make shows, and on the strength of that one show they decide if they're going to make more shows.
+        Some
+        pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones
+        that
+        became nothing.
 
 
-        <!-- Projects Section -->
+    </p>
+
+
+    <!-- Projects Section -->
     <section class="projects">
         <h3>Recent Projects</h3>
         <div class="projectsWrap">
@@ -92,52 +108,52 @@
     </section>
 
 
-        <section id="other-projects">
+    <section id="other-projects">
 
-            <h3>Other Projects</h3>
-            <div class="col3-div">
-                <div clas="col1-div">
-                    <img class="col1-div-img" src="project-assets/projects-section/4.jpg" />
-                    <p class="bodyIntrotextMedium">Project_1 Orbit</p>
-                    <p class="headLinetextMedium">UI/UX Design</p>
-                    <p class="headLinetextMedium">Learn more</p>
-                </div>
-                <div clas="col1-div">
-                    <img class="col1-div-img" src="project-assets/projects-section/5.jpg" />
-                    <p class="bodyIntrotextMedium">Project_2 Orbit</p>
-                    <p class="headLinetextMedium">UI/UX Design</p>
-                    <p class="headLinetextMedium">Learn more</p>
-                </div>
-                <div clas="col1-div">
-                    <img class="col1-div-img" src="project-assets/projects-section/6.jpg" />
-                    <p class="bodyIntrotextMedium">Project_3 Orbit</p>
-                    <p class="headLinetextMedium">UI/UX Design</p>
-                    <p class="headLinetextMedium">Learn more</p>
-                </div>
+        <h3>Other Projects</h3>
+        <div class="col3-div">
+            <div clas="col1-div">
+                <img class="col1-div-img" src="project-assets/projects-section/4.jpg" />
+                <p class="bodyIntrotextMedium">Project_1 Orbit</p>
+                <p class="headLinetextMedium">UI/UX Design</p>
+                <p class="headLinetextMedium">Learn more</p>
             </div>
+            <div clas="col1-div">
+                <img class="col1-div-img" src="project-assets/projects-section/5.jpg" />
+                <p class="bodyIntrotextMedium">Project_2 Orbit</p>
+                <p class="headLinetextMedium">UI/UX Design</p>
+                <p class="headLinetextMedium">Learn more</p>
+            </div>
+            <div clas="col1-div">
+                <img class="col1-div-img" src="project-assets/projects-section/6.jpg" />
+                <p class="bodyIntrotextMedium">Project_3 Orbit</p>
+                <p class="headLinetextMedium">UI/UX Design</p>
+                <p class="headLinetextMedium">Learn more</p>
+            </div>
+        </div>
 
-        </section>
+    </section>
 
-        <section class="yellowsection">
-            <h3>Do you have any questions?</h3>
-            <p class="bodyIntrotextRegular">Let us help you!</p>
+    <section class="yellowsection">
+        <h3>Do you have any questions?</h3>
+        <p class="bodyIntrotextRegular">Let us help you!</p>
 
-            <form>
-                <div class="flex-horizontally">
-                    <div class="iconstyles">
-                        <label class="subscribetoEmail" for="email"></label>
-                        <i class="fa-regular fa-envelope"></i>
-                        <input class="  " type="email" id="email" name="email" placeholder="Enter your email ">
-                    </div>
-                    <input class="questionsCTAButton " type="submit" value="Subscribe">
-
+        <form>
+            <div class="flex-horizontally">
+                <div class="iconstyles">
+                    <label class="subscribetoEmail" for="email"></label>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input class="  " type="email" id="email" name="email" placeholder="Enter your email ">
                 </div>
-            </form>
+                <input class="questionsCTAButton " type="submit" value="Subscribe">
 
-        </section>
-        </body>
+            </div>
+        </form>
 
-        <footer></footer>
+    </section>
+    </body>
+
+    <footer></footer>
 </div>
 
 </html>

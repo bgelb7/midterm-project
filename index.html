@@ -10,6 +10,22 @@
 </head>
 
 <body>
+    <header>
+        <img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" />
+
+        <nav id="page-nav">
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger" />
+
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li> <button class="buttonStyles"><a href="/contactus.html">Contact Us</a></button></li>
+
+            </ul>
+        </nav>
+    </header>
     <!-- Hero section -->
     <section class="hero">
         <div class="heroImgs">
@@ -42,23 +58,28 @@
         <div class="projectsWrap">
             <div class="project1">
                 <img src="./project-assets/projects-section/1.jpg" alt="">
-                <h4 class="bodyIntrotextMedium">Simplify</h4>
-                <p class="headLinetextRegular">UI Design & App Development</p>
-                <a class="headLinetextRegular" href="">Learn more</a>
+                <div class="projectText">
+                    <h4 class="bodyIntrotextMedium">Simplify</h4>
+                    <p class="headLinetextRegular">UI Design & App Development</p>
+                    <a class="headLinetextRegular" href="">Learn more</a>
+                </div>
             </div>
             <div class="project1">
                 <img src="./project-assets/projects-section/2.jpg" alt="">
-                <h4>Dashcoin</h4>
-                <p class="headLinetextRegular">Web Development</p>
-                <a class="headLinetextRegular" href="">Learn more</a>
+                <div class="projectText">
+                    <h4>Dashcoin</h4>
+                    <p class="headLinetextRegular">Web Development</p>
+                    <a class="headLinetextRegular" href="">Learn more</a>
+                </div>
             </div>
             <div class="project1">
                 <img src="./project-assets/projects-section/3.jpg" alt="">
-                <h4>Vectorify</h4>
-                <p class="headLinetextRegular">User Experience Design</p>
-                <a class="headLinetextRegular" href="">Learn more</a>
+                <div class="projectText">
+                    <h4>Vectorify</h4>
+                    <p class="headLinetextRegular">User Experience Design</p>
+                    <a class="headLinetextRegular" href="">Learn more</a>
+                </div>
             </div>
-        </div>
     </section>
 
     <!-- Testimonials Section -->
@@ -87,19 +108,19 @@
         <h3>Services</h3>
         <div class="servicesItem">
             <div class="service">
-                <img src="./project-assets/services-section/icons/1.svg" alt="">
+                <img src="./project-assets/services-section/icons/Icon1.svg" alt="">
                 <p class="bodyIntrotextMedium">User Interface Design</p>
                 <p class="bodyIntrotextRegular">Circle provides you with a stunning user interface design that is accessible to everyone.</p>
                 <a class="headLinetextRegular" href="">Learn More</a>
             </div>
             <div class="service">
-                <img src="./project-assets/services-section/icons/2.svg" alt="">
+                <img src="./project-assets/services-section/icons/Icon2.svg" alt="">
                 <p class="bodyIntrotextMedium">User Experience Design</p>
                 <p class="bodyIntrotextRegular">Circle always focuses on delivering the best user experience to your customers.</p>
                 <a class="headLinetextRegular" href="">Learn More</a>
             </div>
             <div class="service">
-                <img src="./project-assets/services-section/icons/3.svg" alt="">
+                <img src="./project-assets/services-section/icons/Icon3.svg" alt="">
                 <p class="bodyIntrotextMedium">Application Development</p>
                 <p class="bodyIntrotextRegular">We develop high-quality mobile and web applications using the latest technology stack.</p>
                 <a class="headLinetextRegular" href="">Learn More</a>
@@ -109,19 +130,62 @@
 
 
     <!-- Cta Section -->
-    <section>
-        <div class="newsletter">
-            <h3>Do you have any questions?</h3>
-            <p>Let us help you!</p>
-            <div class="ctaMail">
-                <div class="ctaInput">
-                    <input type="text" name="email" placeholder="Enter your email">
-                    <i></i>
+
+    <section class="yellowsection">
+        <h3>Do you have any questions?</h3>
+        <p class="bodyIntrotextRegular">Let us help you!</p>
+
+        <form>
+
+            <div class="flex-horizontally">
+                <div class="iconstyles">
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input type="email" id="email" name="email" placeholder="Enter your email ">
+                    <i class="f "></i>
+
                 </div>
-                <a id="suscribe" href="">Subscribe</a>
+
+                <input class="questionsCTAButton " type="submit" value="Subscribe">
+            </div>
+
+        </form>
+    </section>
+
+    <footer>
+
+        <div class="footerOuter">
+            <div class="logoandText">
+                <img src="/project-assets/logos/circle.svg" alt="">
+                <p class="headLinetextRegular">2972 Westheimer Rd. Santa Ana,</p>
+                <p class="headLinetextRegular"> Illinois 85486 </p>
+            </div>
+            <div class="footerInfoLists">
+                <ul class="headLinetextRegular">
+                    <li>
+                        Team
+                    </li>
+                    <li>
+                        Services
+                    </li>
+                    <li>
+                        About Us
+                    </li>
+                </ul>
+                <ul class="headLinetextRegular">
+                    <li>
+                        Press
+                    </li>
+                    <li>
+                        Projects
+                    </li>
+                    <li>
+                        Privacy Policy
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </footer>
 
 </body>
 

@@ -478,7 +478,6 @@ Reglas CSS contactus.html (contact us page)
     justify-items: center;
     background-color: white;
     box-shadow: 20px 20px 50px rgb(201, 201, 201);
-    width: 340px;
     margin: 20px 0 20px 0;
 }
 
@@ -493,7 +492,6 @@ Reglas CSS contactus.html (contact us page)
 
 .project1 img {
     width: 100%;
-    height: 240px;
     object-fit: cover;
 }
 
@@ -653,7 +651,10 @@ Mediaqueries para (para contactus pagina) IPAD
         padding-left: 50px;
     }
     .project1 {
-        max-width: 340px;
+        width: 340px;
+    }
+    .project1 Img {
+        height: 240px;
     }
     .projectsWrap {
         display: flex;
@@ -751,6 +752,12 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
     }
     .projects h3 {
         padding-left: 50px;
+    }
+    .project1 {
+        width: 340px;
+    }
+    .project1 Img {
+        height: 240px;
     }
     .projectsWrap {
         display: flex;

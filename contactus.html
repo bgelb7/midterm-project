@@ -81,15 +81,21 @@
             <script>
                 function validateForm() {
                     let x = document.forms["myForm"]["email"].value;
+                    let y = document.forms["myForm"]["fname"].value;
                     if (x == "") {
                         alert("We need your email so we can get back to you :)");
                         return false;
+
+                    }
+                    if (y == "ironhack") {
+
+                        alert("Sorry, you cannot be ironhack, because I am ironhack. Try ironhack1 :)");
+                        //  document.forms["myForm"]["email"].style.border = "1px solid ";
+                        //document.getElementById("emailmsg").innerHTML = "Not a valid e-mail address";
+                        return false;
                     }
                 }</script>
-            <script>
-                form.submit();
 
-            </script>
         </form>
     </div>
 

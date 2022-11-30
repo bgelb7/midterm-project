@@ -25,7 +25,6 @@ Reglas generales para todas las paginas
     --grey-color-m: #6B708D;
     /* Neutral/Medium */
     --navyblue: #292E47;
-    ;
     --yellow: #FFC600;
 }
 
@@ -35,6 +34,9 @@ body {
     padding: 0px;
 }
 
+.main {
+   margin: 100px;
+   }
 
 /* Pendiente: añadir etiqueta main con márgenes (incluida navbar) */
 

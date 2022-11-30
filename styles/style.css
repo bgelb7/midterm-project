@@ -2,7 +2,9 @@
 Reglas generales para todas las paginas
 */
 
+
 /* link importación ROBOTO <= EDAIMON */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap');
 
 /* Paleta general de colores, d = dark; m = medium; l = light */
@@ -27,11 +29,20 @@ Reglas generales para todas las paginas
     --yellow: #FFC600;
 }
 
-html {
+html, body {
     margin: 0px;
     padding: 0px;
 }
 
+/* Pendiente: añadir etiqueta main con márgenes (incluida navbar) */
+
+
+
+/* Font Family <= Edaimon */
+* {
+    font-family: "Roboto";
+    box-sizing: border-box;
+}
 
 /* Selectores font <= BEN */
 
@@ -71,7 +82,6 @@ h4 {
     color: #514D67;
 }
 
-
 .bodyIntrotextMedium {
     font-family: 'Roboto';
     font-style: normal;
@@ -101,6 +111,16 @@ h4 {
     color: #514D67;
 }
 
+.headLinetextRegular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    /* identical to box height, or 26px */
+    color: #514D67;
+}
+
 .headLineforLinks {
     /* creado para links en "Our services"  */
     font-family: 'Roboto';
@@ -110,12 +130,8 @@ h4 {
     line-height: 150%;
     /* identical to box height, or 26px */
     text-decoration: none;
-
     /* Primary/Default */
-
     color: #072AC8;
-
-
 }
 
 .headLinetextMedium {
@@ -148,134 +164,210 @@ h4 {
 }
 
 
-/* Header <= EDAIMON, PENDIENTE */
+/* Header logo <= EDAIMON, */
 
-/* Nav-Bar <= EDAIMON, PENDIENTE */
 
 .circle-logo {
     display: block;
-    width: 100px;
+    width: 80px;
+    
 }
 
-nav {
-    width: 400px;
-}
-
-nav label,
-#hamburger {
-    display: none;
-}
-
-nav ul {
-    list-style: none;
+/* Nav-Bar <= EDAIMON */
+.top-nav {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #6B708D;
+    height: 50px;
+    /* padding: 1em; */
+  
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+    padding: 10px;
+    list-style-type: none;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #6B708D;
+    list-style-type: none;
+
+}
+
+/* Blue button CTA */
+
+.button-top-nav {
+    display: flex;
+    background-color: #072AC8;
     justify-content: space-around;
+    padding: 7px;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+
+.button-top-nav a {
+    color: white;
+    white-space: nowrap;
+}
+
+/* Hamburguesa */
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: (var(--grey-color-d));
+ /* Toggle show/hide menu on checkbox click */
+#menu-toggle {
+    display: none;
 }
 
-/* ****************************************** */
-/* ****************************************** */
-/* ************ Media Queries *************** */
-/* ********** for responsiveness ************ */
-/* ****************************************** */
-/* ****************************************** */
-
-@media (max-width: 1024px) {
-    
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #6B708D;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
 }
-@media (max-width: 750px) {
-    header>div {
-        flex-flow: column wrap;
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .button-top-nav {
+        display: none;
+        margin: 20px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 70px;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Hamburguer animation */
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        border: 0.5px solid #6B708D;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #F4F6FC;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #6B708D;
     }
 }
 
-nav {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul {
-    padding: 0;
-}
-
-nav a {
-    color: var(--grey-color-m);
-    font-weight: 500;
-    cursor: pointer;
-}
-
-/* MENU HAMBURGUER */
-nav label {
-    display: inline-block;
-    color: var(--grey-color-m);
-    font-style: normal;
-    font-size: 2em;
-    padding: 10px;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
-
-/* Break down menu items into vertical */
-nav ul li {
-    font-size: 1.5em;
-    text-align: center;
-    border-top: 1px solid var(--grey-color-m);
-    display: block;
-}
-
-/* Toggle menu on click */
-#page-nav ul {
-    display: none;
-}
-
-#page-nav input[type='checkbox']:checked~ul {
-    animation: fadein 2s forwards;
-    display: block;
-}
-
-/* END NAV-BAR <= EDAIMON, PENDIENTE */
-
-/* BANNER PROJECTS <= EDAIMON */
+/* End Nav-Bar */
 
 .img-banner {
-    width: 100%;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+   width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: bottom;
+        
 }
 
-
-/* Section OTHER PROJECTS <= EDAIMON, PENDIENTE */
-
-.col3-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: left;
-    align-content: center;
-    height: auto;
-    text-align: left;
+/* Mobile devices */
+@media (max-width: 768px) {
+    .img-banner {
+        height: 20vh;     
+    }
 }
-   
-.col1-div {
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .img-banner {
+        height: 30vh;     
+    }
+}
+
+.project-info-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
+    margin-bottom: 50px;
+
 }
 
-.col1-div-img {
-    max-width: 100%;
-    padding: 10%;
+#projects-height {
+    line-height: 10px;
+    margin-top: 90px;
 }
+
+/* End Nav-Bar */
 
 /* para placeholder text formulario (contactus pagina) */
 
@@ -284,7 +376,6 @@ input {
     box-sizing: border-box;
     width: 100%;
     border: none;
-
 }
 
 ::placeholder {
@@ -476,7 +567,7 @@ Reglas CSS contactus.html (contact us page)
 .project1 img {
     width: 100%;
     height: auto;
-}
+}   
 
 
 /* Testimonials section */
@@ -490,6 +581,10 @@ Reglas CSS contactus.html (contact us page)
     align-items: center;
     height: 600px;
     color: white;
+}
+
+.avatars {
+    display: none;
 }
 
 .testimonials h3 {
@@ -525,7 +620,7 @@ Reglas CSS contactus.html (contact us page)
     padding: 0px 15px;
 }
 
-.testimonials img {
+.testimonials #pfile {
     width: 150px;
     clip-path: circle(50px);
 }
@@ -592,6 +687,7 @@ Mediaqueries para (para contactus pagina) IPAD
     .formOutterDiv {
         margin: 10%;
     }
+
     .sideBySide {
         display: flex;
         flex-direction: row;
@@ -599,12 +695,15 @@ Mediaqueries para (para contactus pagina) IPAD
         align-items: center;
         gap: 4%;
     }
+
     .box1 {
         width: 100%;
     }
+
     .allFormFields {
         margin: 3% 0;
     }
+
     /* HOME IPAD */
     /*Hero section Tablet */
     .hero {
@@ -612,26 +711,32 @@ Mediaqueries para (para contactus pagina) IPAD
         flex-direction: column;
         margin: 50px 35px 50px 35px;
     }
+
     .heroContent h1 {
         margin: 20px;
         font-size: 70px;
         line-height: 90px;
     }
+
     .heroCta a {
         padding: 30px 20px;
         width: 150px;
     }
+
     .hero p {
         margin: 50px;
     }
+
     /*Clients section Tablet */
     /*Projects section Tablet */
     .projects h3 {
         padding-left: 50px;
     }
+
     .project1 {
         max-width: 340px;
     }
+
     .projectsWrap {
         display: flex;
         flex-direction: row;
@@ -640,11 +745,13 @@ Mediaqueries para (para contactus pagina) IPAD
         align-items: center;
         justify-content: center;
     }
+
     /*Testimonials section Tablet*/
     /*Services section Tablet*/
     .services h3 {
         padding-left: 50px;
     }
+
     .servicesItem {
         display: flex;
         flex-direction: row;
@@ -653,6 +760,7 @@ Mediaqueries para (para contactus pagina) IPAD
         align-items: center;
         justify-content: center;
     }
+
     .service {
         max-width: 340px;
     }
@@ -668,6 +776,7 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
     .formOutterDiv {
         margin: 10%;
     }
+
     .sideBySide {
         display: flex;
         flex-direction: row;
@@ -675,12 +784,15 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         align-items: center;
         gap: 4%;
     }
+
     .box1 {
         width: 100%;
     }
+
     .allFormFields {
         margin: 3% 0;
     }
+
     /*HERO SECTION */
     .hero {
         margin: 65px;
@@ -688,10 +800,12 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         display: grid;
         grid-template-columns: repeat(12, 1fr);
     }
+
     .heroImgs {
         order: 2;
         grid-column: 7 / 12;
     }
+
     .heroContent {
         order: 1;
         grid-column: 1 / 7;
@@ -699,39 +813,49 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         justify-content: center;
         align-items: flex-start;
     }
+
     .heroContent h1 {
         text-align: start;
         padding-left: 20px;
         margin-bottom: 10px;
     }
+
     .heroContent #intro {
         padding: 0 20px 0 20px;
     }
+
     .heroImgs #img1 {
         width: 30vw;
     }
+
     .heroImgs #img2 {
         width: 20vw;
     }
+
     .heroImgs #img3 {
         width: 20vw;
     }
+
     /*CLIENTS SECTION */
     .clients {
         margin: 65px;
         padding: 0 100px 0 100px;
     }
+
     /*PROJECTS SECTION */
     .projects {
         margin: 65px;
         padding: 0 100px 0 100px;
     }
+
     .projects h3 {
         padding-left: 50px;
     }
+
     .project1 {
         max-width: 300px;
     }
+
     .projectsWrap {
         display: flex;
         flex-direction: row;
@@ -740,15 +864,64 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         align-items: center;
         justify-content: center;
     }
+
     /*Testimonials section Tablet*/
+    .test {
+        position: relative;
+    }
+
+    .avatars {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 300px 300px;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .testimonials {
+        grid-column: 1 / 13;
+    }
+
+    .avatars #av1 {
+        width: 10vw;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .avatars #av2 {
+        width: 10vw;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .avatars #av3 {
+        width: 10vw;
+        grid-column: 11;
+        grid-row: 1;
+    }
+
+    .avatars #av4 {
+        width: 10vw;
+        grid-column: 11;
+        grid-row: 2;
+    }
+
+    #orbit {
+        position: absolute;
+    }
+
     /*Services section Tablet*/
     .services {
         margin: 65px;
         padding: 0 100px 0 100px;
     }
+
     .services h3 {
         padding-left: 50px;
     }
+
     .servicesItem {
         display: flex;
         flex-direction: row;
@@ -757,6 +930,7 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         align-items: center;
         justify-content: center;
     }
+
     .service {
         max-width: 300px;
     }
@@ -783,7 +957,6 @@ CSS para seccion "Do you have any questions*/
     background-position: 10px 1rem;
 }
 
-
 .questionsCTAButton {
     background-color: #072AC8;
     font-family: 'Roboto';
@@ -802,9 +975,7 @@ CSS para seccion "Do you have any questions*/
     text-align: center;
 }
 
-
 .fa-regular {
-
     font-size: 1.3em;
     z-index: 1;
     left: 3%;
@@ -831,24 +1002,18 @@ CSS para seccion "Do you have any questions*/
 
 Estilo para "our services section"*/
 
-
 .ourServices {
-
     display: flex;
     flex-direction: column;
 }
 
-
-
 .servicesInd {
-
     background-color: white;
     padding: 3%;
     margin: 2%;
 }
 
 #servicesSection {
-
     padding: 5%;
 }
 
@@ -858,14 +1023,10 @@ Estilo para "our services section"*/
 Estilo para "testimonials section"*/
 
 #testimonials {
-
     background-color: #292E47;
-
-
 }
 
 .kristenWatsonText {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -881,61 +1042,48 @@ Estilo para "testimonials section"*/
     font-weight: 400;
     font-size: 13px;
     line-height: 15px;
-
     /* Neutral/Light */
-
     color: #F4F6FC;
-
 }
+
 
 /* Primary/Hover */
 
-
 .testimonials h3 {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
-
     color: #F4F6FC;
     text-align: center;
 }
 
 .emoji {
-
     display: none;
 }
 
 .testimonials {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     background-color: #292E47;
-
 }
 
 .testimonialsquote {
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
     /* or 10px */
-
     text-align: center;
-
     /* Secondary/1 */
-
     color: #FFC600;
 }
 
 .kristin img {
-
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -943,25 +1091,36 @@ Estilo para "testimonials section"*/
 }
 
 .kristin {
-
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .flex {
-
     display: flex;
 }
 
 .flexcolumn {
-
     display: flex;
     flex-direction: column;
 }
 
+.footerOuter {
 
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.footerInfoLists {
+
+    display: flex;
+}
+
+.footerInfoLists ul {
+
+    list-style: none;
+}
 
 /*Mediaqueries para  IPAD
 */
@@ -972,7 +1131,6 @@ Estilo para "testimonials section"*/
 
 Mediaqueries para (para Do you have any questions pagina) IPAD
 */
-
     .flex-horizontally {
         display: flex;
         flex-direction: row;
@@ -984,13 +1142,11 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
     }
 
     input {
-
         width: fit-content;
         padding-left: 50px;
     }
 
     .fa-regular {
-
         position: relative;
         font-size: 1.3em;
         z-index: 1;
@@ -999,26 +1155,18 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
         color: #7B7B7B;
         cursor: pointer;
         width: 0;
-
     }
 
     .ourServices {
         display: flex;
         flex-direction: row;
-
     }
 
     .emoji {
-
         display: block;
         width: 100px;
-
     }
-
-
-
 }
-
 
 
 /*
@@ -1026,19 +1174,12 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
 Mediaqueries para  Desktop
 */
 
-
-
-
-
 @media (min-width: 1025px) {
-
 
     /*
 
 Mediaqueries para seccion "Do you have any questions " Desktop
 */
-
-
     .flex-horizontally {
         display: flex;
         flex-direction: row;
@@ -1047,11 +1188,9 @@ Mediaqueries para seccion "Do you have any questions " Desktop
         text-align: center;
         gap: 6%;
         position: relative;
-
     }
 
     .fa-regular {
-
         position: relative;
         font-size: 1.3em;
         z-index: 1;
@@ -1060,26 +1199,19 @@ Mediaqueries para seccion "Do you have any questions " Desktop
         color: #7B7B7B;
         cursor: pointer;
         width: 0;
-
     }
 
-
-
     input {
-
         width: fit-content;
         padding-left: 50px;
-
     }
 
     .ourServices {
         display: flex;
         flex-direction: row;
-
     }
 
     .emoji {
-
         display: block;
         width: 100px;
     }

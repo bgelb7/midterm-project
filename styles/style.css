@@ -471,16 +471,19 @@ Reglas CSS contactus.html (contact us page)
 .projects {
     display: flex;
     flex-direction: column;
-    margin: 0px 35px 70px 35px;
+    margin: 100px 35px 100px 35px;
 }
 
 .project1 {
     justify-items: center;
     background-color: white;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 15px 20px 40px 20px;
     box-shadow: 20px 20px 50px rgb(201, 201, 201);
+    width: 340px;
+    margin: 20px 0 20px 0;
+}
+
+.projectText {
+    padding: 20px;
 }
 
 .project1 a {
@@ -490,7 +493,8 @@ Reglas CSS contactus.html (contact us page)
 
 .project1 img {
     width: 100%;
-    height: auto;
+    height: 240px;
+    object-fit: cover;
 }
 
 
@@ -742,14 +746,11 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
     }
     /*PROJECTS SECTION */
     .projects {
-        margin: 65px;
+        margin: 100px 65px 100px 65px;
         padding: 0 100px 0 100px;
     }
     .projects h3 {
         padding-left: 50px;
-    }
-    .project1 {
-        max-width: 300px;
     }
     .projectsWrap {
         display: flex;
@@ -794,9 +795,6 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         width: 10vw;
         grid-column: 11;
         grid-row: 2;
-    }
-    #orbit {
-        position: absolute;
     }
     /*Services section Tablet*/
     .services {

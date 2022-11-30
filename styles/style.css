@@ -784,9 +784,10 @@ Mediaqueries para (para contactus pagina) IPAD
     }
 
     .top-nav {
-        margin: 75px;
         padding-left: 100px;
         padding-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
 }
 
@@ -962,9 +963,10 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
     }
 
     .top-nav {
-        margin: 75px;
         padding-left: 100px;
         padding-right: 100px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
 }
 

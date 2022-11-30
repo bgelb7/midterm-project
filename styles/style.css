@@ -29,9 +29,21 @@ Reglas generales para todas las paginas
     --yellow: #FFC600;
 }
 
-html {
+html,
+body {
     margin: 0px;
     padding: 0px;
+}
+
+
+/* Pendiente: añadir etiqueta main con márgenes (incluida navbar) */
+
+
+/* Font Family <= Edaimon */
+
+* {
+    font-family: "Roboto";
+    box-sizing: border-box;
 }
 
 
@@ -102,6 +114,16 @@ h4 {
     color: #514D67;
 }
 
+.headLinetextRegular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    /* identical to box height, or 26px */
+    color: #514D67;
+}
+
 .headLineforLinks {
     /* creado para links en "Our services"  */
     font-family: 'Roboto';
@@ -145,152 +167,208 @@ h4 {
 }
 
 
-/* Header <= EDAIMON, PENDIENTE */
-
-
-/* Nav-Bar <= EDAIMON, PENDIENTE */
+/* Header logo <= EDAIMON, */
 
 .circle-logo {
     display: block;
-    width: 100px;
+    width: 80px;
 }
 
-nav {
-    width: 400px;
-}
 
-nav label,
-#hamburger {
-    display: none;
-}
+/* Nav-Bar <= EDAIMON */
 
-nav ul {
-    list-style: none;
+.top-nav {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    color: #6B708D;
+    height: 50px;
+    /* padding: 1em; */
 }
 
-nav a {
-    text-decoration: none;
-    color: (var(--grey-color-d));
-}
-
-
-/* ****************************************** */
-
-
-/* ****************************************** */
-
-
-/* ************ Media Queries *************** */
-
-
-/* ********** for responsiveness ************ */
-
-
-/* ****************************************** */
-
-
-/* ****************************************** */
-
-@media (max-width: 1024px) {}
-
-@media (max-width: 750px) {
-    header>div {
-        flex-flow: column wrap;
-    }
-}
-
-nav {
-    width: 100%;
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul {
-    padding: 0;
-}
-
-nav a {
-    color: var(--grey-color-m);
-    font-weight: 500;
-    cursor: pointer;
-}
-
-
-/* MENU HAMBURGUER */
-
-nav label {
-    display: inline-block;
-    color: var(--grey-color-m);
-    font-style: normal;
-    font-size: 2em;
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
     padding: 10px;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #6B708D;
+    list-style-type: none;
 }
 
 
-/* Break down menu items into vertical */
+/* Blue button CTA */
 
-nav ul li {
-    font-size: 1.5em;
-    text-align: center;
-    border-top: 1px solid var(--grey-color-m);
-    display: block;
+.button-top-nav {
+    display: flex;
+    background-color: #072AC8;
+    justify-content: space-around;
+    padding: 7px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.button-top-nav a {
+    color: white;
+    white-space: nowrap;
 }
 
 
-/* Toggle menu on click */
+/* Hamburguesa */
 
-#page-nav ul {
+.menu-button-container {
     display: none;
-}
-
-#page-nav input[type='checkbox']:checked~ul {
-    animation: fadein 2s forwards;
-    display: block;
-}
-
-
-/* END NAV-BAR <= EDAIMON, PENDIENTE */
-
-
-/* BANNER PROJECTS <= EDAIMON */
-
-.img-banner {
-    width: 100%;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-}
-
-
-/* Section OTHER PROJECTS <= EDAIMON, PENDIENTE */
-
-.col3-div {
-    display: flex;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: left;
-    align-content: center;
-    height: auto;
-    text-align: left;
-}
-
-.col1-div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.col1-div-img {
-    max-width: 100%;
-    padding: 10%;
+
+/* Toggle show/hide menu on checkbox click */
+
+#menu-toggle {
+    display: none;
 }
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #6B708D;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+
+/* Mobile devices */
+
+@media (max-width: 768px) {
+    .menu-button-container {
+        display: flex;
+    }
+    .button-top-nav {
+        display: none;
+        margin: 20px;
+    }
+    .menu {
+        position: absolute;
+        top: 70px;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Hamburguer animation */
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked~.menu li {
+        border: 0.5px solid #6B708D;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #F4F6FC;
+    }
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #6B708D;
+    }
+}
+
+
+/* End Nav-Bar */
+
+.img-banner {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+/* Mobile devices */
+
+@media (max-width: 768px) {
+    .img-banner {
+        height: 20vh;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .img-banner {
+        height: 30vh;
+    }
+}
+
+.project-info-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+#projects-height {
+    line-height: 10px;
+    margin-top: 90px;
+}
+
+
+/* End Nav-Bar */
 
 
 /* para placeholder text formulario (contactus pagina) */
@@ -993,6 +1071,20 @@ Estilo para "testimonials section"*/
 .flexcolumn {
     display: flex;
     flex-direction: column;
+}
+
+.footerOuter {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.footerInfoLists {
+    display: flex;
+}
+
+.footerInfoLists ul {
+    list-style: none;
 }
 
 

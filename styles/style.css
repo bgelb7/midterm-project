@@ -390,8 +390,6 @@ input {
     margin-left: 10px;
 }
 
-.email::placeholder {}
-
 textarea {
     font-family: 'Roboto';
     font-style: normal;

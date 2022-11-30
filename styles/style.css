@@ -29,10 +29,14 @@ Reglas generales para todas las paginas
     --yellow: #FFC600;
 }
 
-html {
+html, body {
     margin: 0px;
     padding: 0px;
 }
+
+/* Pendiente: añadir etiqueta main con márgenes (incluida navbar) */
+
+
 
 /* Font Family <= Edaimon */
 * {

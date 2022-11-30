@@ -1,5 +1,3 @@
-
-
 async function getProjects() {
     let url = 'https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2';
     try {
@@ -8,4 +6,5 @@ async function getProjects() {
     } catch (error) {
         console.log(error);
     }
+
 }

@@ -6,4 +6,5 @@ async function getProjects() {
     } catch (error) {
         console.log(error);
     }
+
 }

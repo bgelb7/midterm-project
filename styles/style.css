@@ -111,6 +111,16 @@ h4 {
     color: #514D67;
 }
 
+.headLinetextRegular {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    /* identical to box height, or 26px */
+    color: #514D67;
+}
+
 .headLineforLinks {
     /* creado para links en "Our services"  */
     font-family: 'Roboto';
@@ -859,6 +869,7 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
     .test {
         position: relative;
     }
+
     .avatars {
         position: absolute;
         display: grid;
@@ -868,32 +879,39 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
         justify-content: center;
         z-index: 1;
     }
+
     .testimonials {
         grid-column: 1 / 13;
     }
+
     .avatars #av1 {
         width: 10vw;
         grid-column: 2;
         grid-row: 1;
     }
+
     .avatars #av2 {
         width: 10vw;
         grid-column: 2;
         grid-row: 2;
     }
+
     .avatars #av3 {
         width: 10vw;
         grid-column: 11;
         grid-row: 1;
     }
+
     .avatars #av4 {
         width: 10vw;
         grid-column: 11;
         grid-row: 2;
     }
+
     #orbit {
         position: absolute;
     }
+
     /*Services section Tablet*/
     .services {
         margin: 65px;
@@ -1087,11 +1105,28 @@ Estilo para "testimonials section"*/
     flex-direction: column;
 }
 
+.footerOuter {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.footerInfoLists {
+
+    display: flex;
+}
+
+.footerInfoLists ul {
+
+    list-style: none;
+}
 
 /*Mediaqueries para  IPAD
 */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
     /*
 
 Mediaqueries para (para Do you have any questions pagina) IPAD
@@ -1105,10 +1140,12 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
         width: 100%;
         justify-content: flex-start;
     }
+
     input {
         width: fit-content;
         padding-left: 50px;
     }
+
     .fa-regular {
         position: relative;
         font-size: 1.3em;
@@ -1119,10 +1156,12 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
         cursor: pointer;
         width: 0;
     }
+
     .ourServices {
         display: flex;
         flex-direction: row;
     }
+
     .emoji {
         display: block;
         width: 100px;
@@ -1136,6 +1175,7 @@ Mediaqueries para  Desktop
 */
 
 @media (min-width: 1025px) {
+
     /*
 
 Mediaqueries para seccion "Do you have any questions " Desktop
@@ -1149,6 +1189,7 @@ Mediaqueries para seccion "Do you have any questions " Desktop
         gap: 6%;
         position: relative;
     }
+
     .fa-regular {
         position: relative;
         font-size: 1.3em;
@@ -1159,14 +1200,17 @@ Mediaqueries para seccion "Do you have any questions " Desktop
         cursor: pointer;
         width: 0;
     }
+
     input {
         width: fit-content;
         padding-left: 50px;
     }
+
     .ourServices {
         display: flex;
         flex-direction: row;
     }
+
     .emoji {
         display: block;
         width: 100px;

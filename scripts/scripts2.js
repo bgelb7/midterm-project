@@ -1,32 +1,55 @@
 
 window.addEventListener("load", async () => {
-
     await renderProjects()
-
-
+    const urlProject = new URLSearchParams(window.location.search)
+    const uuid = urlProject.get("uuid");
+    console.log(uuid);
+    await fetchContent(uuid);
 
 });
-
+ 
 const url = "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2 ";
+
+async function fetchContent (uuid) {
+    let content = await fetch(url)
+    let data = await content.json();
+    const uniqueProject = data.find(function(project){
+        return project.uuid === uuid;
+    })
+    console.log(uniqueProject)   
+    document.getElementById("projects-height").innerHTML = uniqueProject.name;
+}
+
+
 
 async function fetchProjects() {
     let response = await fetch(url);
 
     let data = await response.json();
     console.log(data);
-
-
+    data.sort(() => Math.random() - 0.5);
     console.log("data", data);
-    return data.slice(0, 4);
+    return data.slice(0, 3)
 
-    const random = data.sort
-    // Data sort y dentro en vez de a y b, poner random > 0> 5
-    data[Math.floor(Math.random())];
+    // sortedProjects.sort(() => Math.random() - 0.5);
+    // const random = data.sort(function(a, b)) {
+    //     if (a.uuid < b.uuid) {
+    //         return -1;
+    //     }
+
+    //     if (a.uuid > b.uuid) {
+    //         return 1;
+    //     }
+
+    //     return 0;
+    // }
+    // // Data sort y dentro en vez de a y b, poner random > 0> 5
+    // data[Math.floor(Math.random())];
 
 }
 
 
-async function renderProjects(); {
+async function renderProjects() {
 
     let projects = await fetchProjects();
     let html = " ";
@@ -41,11 +64,15 @@ async function renderProjects(); {
                             
                             <p class="headlinetextRegular">${project.description} </p>
                             
-                           <a class="headLinetextRegular" href="./project.html?uuid=${project.uuid}"> learn more</a>
+                            <a class="headLinetextRegular" href="./project.html?uuid=${project.uuid}"> learn more</a>
                             
                             
                             </div>
-                        </div>`;
+                        </div>
+
+
+                        `;
+
 
         html += htmlSegment;
     });

@@ -16,11 +16,13 @@ async function fetchContent (uuid) {
     const uniqueProject = data.find(function(project){
         return project.uuid === uuid;
     })
-    console.log(uniqueProject)   
+    console.log(uniqueProject)
     document.getElementById("projects-height").innerHTML = uniqueProject.name;
+    document.getElementById("project-description").innerHTML = uniqueProject.description;
+    document.getElementById("project-date").innerHTML = uniqueProject.completed_on;
+    document.getElementById("project-content").innerHTML = uniqueProject.content;
+    document.getElementById("project-image").src = uniqueProject.image;
 }
-
-
 
 async function fetchProjects() {
     let response = await fetch(url);
@@ -30,24 +32,7 @@ async function fetchProjects() {
     data.sort(() => Math.random() - 0.5);
     console.log("data", data);
     return data.slice(0, 3)
-
-    // sortedProjects.sort(() => Math.random() - 0.5);
-    // const random = data.sort(function(a, b)) {
-    //     if (a.uuid < b.uuid) {
-    //         return -1;
-    //     }
-
-    //     if (a.uuid > b.uuid) {
-    //         return 1;
-    //     }
-
-    //     return 0;
-    // }
-    // // Data sort y dentro en vez de a y b, poner random > 0> 5
-    // data[Math.floor(Math.random())];
-
 }
-
 
 async function renderProjects() {
 

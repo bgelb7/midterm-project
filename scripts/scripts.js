@@ -30,24 +30,13 @@ async function fetchProjects() {
 
 }
 
-
-
-
-
-
-
-
 //3.  Filtrar data con slice etc y obtener la info correcta 
-
-
 
 /*const fetchProjects = last3;
 last3 = data.reduce(function (accumulator, valor) {
 
     return last3
     console.log(sumWithInitial);
-
-
 });
 */
 
@@ -60,7 +49,6 @@ async function renderProjects() {
     let projects = await fetchProjects();
     let html = '';
     projects.forEach(project => {
-
         let htmlSegment = `<div class="project1">
                             <img src="${project.image}" >
                             
@@ -81,6 +69,7 @@ async function renderProjects() {
 
     let projectsWrap = document.querySelector('.projectsWrap');
     projectsWrap.innerHTML = html;
+    return projectsWrap;
 }
 
 renderProjects();

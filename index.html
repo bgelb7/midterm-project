@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src ="/scripts/scripts.js"></script>
     <script src="https://kit.fontawesome.com/7bcc306e1e.js" crossorigin="anonymous"></script>
 
-    <script src="/scripts/scripts.js"></script>
 </head>
 
 <header>
     <div class="top-nav">
-        <img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" />
+        <a href="index.html"><img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" /></a>
 
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
@@ -23,9 +23,11 @@
 
 
         <ul class="menu">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/project.html">Projects</a></li>
-            <li><a href="/services.html">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li class="contact-only-mobile"><a href="contactus.html">Contact Us</a></li>
+
         </ul>
 
         <ul class="menu button-top-nav">
@@ -40,22 +42,22 @@
     <section class="hero">
         <div class="heroImgs">
             <img id="img1" src="./project-assets/hero-section/hero-image.png" alt="">
-            <img id="img2" src="./project-assets/hero-section/card-1.png" alt="">
-            <img id="img3" src="./project-assets/hero-section/card-2.png" alt="">
+            <img id="img2" class="fade-in-image" src="./project-assets/hero-section/card-1.png" alt="">
+            <img id="img3" class="fade-in-image" src="./project-assets/hero-section/card-2.png" alt="">
         </div>
         <div class="heroContent">
             <h1>Empower Your Business With Stunning Design!</h1>
             <p id="intro" class="bodyIntrotextRegular">Circle is a digital design and development studio. We design and
                 develop astonishing websites and mobile apps.</p>
             <div class="heroCta">
-                <a class="headLinetextMedium" id="heroCta" href="./contactus.html">Get in touch</a>
-                <a class="headLinetextMedium" href="./project.html">See out work</a>
+                <a class="headLinetextMedium" id="heroCta" href="contactus.html">Get in touch</a>
+                <a class="headLinetextMedium" href="#projects">See our work</a>
             </div>
         </div>
     </section>
 
     <!-- Clients section -->
-    <section class="clients">
+    <section class="clients fade-in-image">
         <img src="./project-assets/logos/airbnb-logo.svg" alt="Airbnb">
         <img src="./project-assets/logos/google-logo.svg" alt="Google">
         <img src="./project-assets/logos/microsoft-logo.svg" alt="Microsoft">
@@ -64,33 +66,33 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects">
+    <section id="projects" class="projects">
         <h3>Recent Projects</h3>
         <div class="projectsWrap">
-            <!--   <div class="project1">
+            <div class="project1">
                 <img src="./project-assets/projects-section/1.jpg" alt="">
                 <div class="projectText">
-                    <h4 class="bodyIntrotextMedium">Simplify</h4>
-                    <p class="headLinetextRegular">UI Design & App Development</p>
-                    <a class="headLinetextRegular" href="#">Learn more</a>
+                    <h4 class="bodyIntrotextMedium">Simplifo</h4>
+                    <p class="headLinetextRegular">UI Design & App Development0</p>
+                    <a class="headLinetextRegular" href="/project.html?uuid=1">Learn more0</a>
                 </div>
             </div>
             <div class="project1">
                 <img src="./project-assets/projects-section/2.jpg" alt="">
                 <div class="projectText">
-                    <h4 class="bodyIntrotextMedium">Dashcoin</h4>
+                    <h4>Dashcoin</h4>
                     <p class="headLinetextRegular">Web Development</p>
-                    <a class="headLinetextRegular" href="">Learn more</a>
+                    <a class="headLinetextRegular" href="/project.html?uuid=2">Learn more</a>
                 </div>
             </div>
             <div class="project1">
                 <img src="./project-assets/projects-section/3.jpg" alt="">
                 <div class="projectText">
-                    <h4 class="bodyIntrotextMedium">Vectorify</h4>
+                    <h4>Vectorify</h4>
                     <p class="headLinetextRegular">User Experience Design</p>
-                    <a class="headLinetextRegular" href="">Learn more</a>
-                </div>-->
-        </div>
+                    <a class="headLinetextRegular" href="/project.html?uuid=3">Learn more</a>
+                </div>
+            </div>
     </section>
 
     <!-- Testimonials Section -->
@@ -116,8 +118,8 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
-        <h3>Services</h3>
+    <section id="services" class="services">
+        <h3 >Services</h3>
         <div class="servicesItem">
             <div class="service">
                 <img src="./project-assets/services-section/icons/Icon1.svg" alt="">
@@ -130,8 +132,7 @@
                 <img src="./project-assets/services-section/icons/Icon2.svg" alt="">
                 <p class="bodyIntrotextMedium">User Experience Design</p>
                 <p class="bodyIntrotextRegular">Circle always focuses on delivering the best user experience to your
-                    customers.
-                </p>
+                    customers.</p>
                 <a class="headLinetextRegular" href="">Learn More</a>
             </div>
             <div class="service">
@@ -172,7 +173,7 @@
 
         <div class="footerOuter">
             <div class="logoandText">
-                <img src="/project-assets/logos/circle.svg" alt="">
+                <a href="index.html"><img src="/project-assets/logos/circle.svg" alt=""></a>
                 <p class="headLinetextRegular">2972 Westheimer Rd. Santa Ana,</p>
                 <p class="headLinetextRegular"> Illinois 85486 </p>
             </div>

@@ -1,10 +1,3 @@
-/*
-Reglas generales para todas las paginas
-*/
-
-
-/* link importación ROBOTO <= EDAIMON */
-
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap');
 
 /* Paleta general de colores, d = dark; m = medium; l = light */
@@ -32,16 +25,48 @@ html,
 body {
     margin: 0px;
     padding: 0px;
+    scroll-behavior: smooth;
 }
 
+/* Animation images */
+.fade-in-image {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 .main {
-   margin: 100px;
-   }
+    margin: 100px;
+}
 
-/* Pendiente: añadir etiqueta main con márgenes (incluida navbar) */
-
-
-/* Font Family <= Edaimon */
+/* Font Family */
 
 * {
     font-family: "Roboto";
@@ -49,10 +74,9 @@ body {
 }
 
 
-/* Selectores font <= BEN */
+/* Selectores font */
 
 h1 {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -61,7 +85,6 @@ h1 {
 }
 
 h2 {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
@@ -70,7 +93,6 @@ h2 {
 }
 
 h3 {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -79,7 +101,6 @@ h3 {
 }
 
 h4 {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -88,7 +109,6 @@ h4 {
 }
 
 .bodyIntrotextMedium {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -97,7 +117,6 @@ h4 {
 }
 
 .bodyIntrotextRegular {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -107,7 +126,6 @@ h4 {
 }
 
 .headLinetextRegular a {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -117,7 +135,6 @@ h4 {
 }
 
 .headLinetextRegular {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -128,7 +145,6 @@ h4 {
 
 .headLineforLinks {
     /* creado para links en "Our services"  */
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -140,7 +156,6 @@ h4 {
 }
 
 .headLinetextMedium {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
@@ -150,7 +165,6 @@ h4 {
 }
 
 .caption1TextRegular {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -160,7 +174,6 @@ h4 {
 }
 
 .caption2TextRegular {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -169,7 +182,7 @@ h4 {
 }
 
 
-/* Header logo <= EDAIMON, */
+/* Header logo */
 
 .circle-logo {
     display: block;
@@ -177,7 +190,7 @@ h4 {
 }
 
 
-/* Nav-Bar <= EDAIMON */
+/* Nav-Bar */
 
 .top-nav {
     display: flex;
@@ -187,7 +200,6 @@ h4 {
     color: #6B708D;
     height: 50px;
     padding: 35px;
-    /* padding: 1em; */
 }
 
 .menu {
@@ -196,6 +208,7 @@ h4 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    z-index: 2;
 }
 
 .menu>li {
@@ -228,7 +241,6 @@ h4 {
     white-space: nowrap;
 }
 
-
 /* Hamburguesa */
 
 .menu-button-container {
@@ -240,7 +252,6 @@ h4 {
     justify-content: center;
     align-items: center;
 }
-
 
 /* Toggle show/hide menu on checkbox click */
 
@@ -284,7 +295,6 @@ h4 {
     transform: rotate(-405deg);
 }
 
-
 /* Mobile devices */
 
 @media (max-width: 768px) {
@@ -299,13 +309,14 @@ h4 {
 
     .menu {
         position: absolute;
-        top: 70px;
-        margin-top: 50px;
+        top: 50px;
+        margin-top: 10px;
         left: 0;
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
+        box-shadow: 0px 10px 20px -10px #6B708D;
     }
 
     /* Hamburguer animation */
@@ -340,9 +351,6 @@ h4 {
 
 }
 
-
-/* End Nav-Bar */
-
 .img-banner {
     width: 100%;
     height: 40vh;
@@ -363,6 +371,10 @@ h4 {
     .img-banner {
         height: 30vh;
     }
+
+    .contact-only-mobile {
+        display: none;
+    }
 }
 
 .project-info-container {
@@ -373,12 +385,9 @@ h4 {
 }
 
 #projects-height {
-    line-height: 10px;
     margin-top: 90px;
 }
 
-
-/* End Nav-Bar */
 
 
 /* para placeholder text formulario (contactus pagina) */
@@ -391,7 +400,6 @@ input {
 }
 
 ::placeholder {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -401,7 +409,6 @@ input {
 }
 
 textarea {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
@@ -415,7 +422,6 @@ body {
 
 .buttonStyles {
     background-color: #072AC8;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
@@ -429,10 +435,7 @@ body {
 }
 
 
-/*
-
-Reglas CSS contactus.html (contact us page) 
-*/
+/* Reglas CSS contactus.html (contact us page) */
 
 .formFieldBackgroundColor {
     background-color: #CFD2DE;
@@ -457,9 +460,6 @@ Reglas CSS contactus.html (contact us page)
 .allFormFields {
     margin: 3% 0;
 }
-
-
-/* HOME MOBILE */
 
 
 /* Hero section */
@@ -569,7 +569,6 @@ Reglas CSS contactus.html (contact us page)
 
 .projectText {
     padding: 20px;
-    font-family: roboto;
 }
 
 .project1 a {
@@ -616,7 +615,6 @@ Reglas CSS contactus.html (contact us page)
     color: #43D2FF;
     padding-top: 20px;
     line-height: 1px;
-    font-family: roboto;
 }
 
 .testimonials .caption2TextRegular {
@@ -655,7 +653,6 @@ Reglas CSS contactus.html (contact us page)
     margin-bottom: 20px;
     padding: 40px 20px 40px 20px;
     box-shadow: 20px 20px 50px rgb(201, 201, 201);
-    font-family: roboto;
 }
 
 .service a {
@@ -790,6 +787,8 @@ Mediaqueries para (para contactus pagina) IPAD
         padding-right: 100px;
         margin-top: 30px;
         margin-bottom: 10px;
+        position: relative;
+        z-index: 10;
     }
 }
 
@@ -820,6 +819,10 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
 
     .allFormFields {
         margin: 3% 0;
+    }
+
+    .contact-only-mobile {
+        display: none;
     }
 
     /*HERO SECTION */
@@ -973,9 +976,7 @@ Mediaqueries para (para contactus pagina) Desktop (todos los desktops mayor que 
 }
 
 
-/*
-
-CSS para seccion "Do you have any questions*/
+/* CSS para seccion "Do you have any questions */
 
 .yellowsection {
     background-color: #FBC301;
@@ -994,7 +995,6 @@ CSS para seccion "Do you have any questions*/
 
 .questionsCTAButton {
     background-color: #072AC8;
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
@@ -1033,9 +1033,7 @@ CSS para seccion "Do you have any questions*/
 }
 
 
-/*
-
-Estilo para "our services section"*/
+/* Estilo para "our services section" */
 
 .ourServices {
     display: flex;
@@ -1053,39 +1051,31 @@ Estilo para "our services section"*/
 }
 
 
-/*
-
-Estilo para "testimonials section"*/
+/* Estilo para "testimonials section" */
 
 #testimonials {
     background-color: #292E47;
 }
 
 .kristenWatsonText {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 100%;
-    /* identical to box height, or 17px */
     color: #A2D6F9;
 }
 
 .bookingcomText {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 15px;
-    /* Neutral/Light */
     color: #F4F6FC;
 }
-
 
 /* Primary/Hover */
 
 .testimonials h3 {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -1107,14 +1097,11 @@ Estilo para "testimonials section"*/
 }
 
 .testimonialsquote {
-    font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
-    /* or 10px */
     text-align: center;
-    /* Secondary/1 */
     color: #FFC600;
 }
 
@@ -1155,15 +1142,11 @@ Estilo para "testimonials section"*/
 }
 
 
-/*Mediaqueries para  IPAD
-*/
+/* Mediaqueries para  IPAD */
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    /*
-
-Mediaqueries para (para Do you have any questions pagina) IPAD
-*/
+/* Mediaqueries para (para Do you have any questions pagina) IPAD */
     .flex-horizontally {
         display: flex;
         flex-direction: row;
@@ -1208,17 +1191,11 @@ Mediaqueries para (para Do you have any questions pagina) IPAD
 }
 
 
-/*
-
-Mediaqueries para  Desktop
-*/
+/* Mediaqueries para  Desktop */
 
 @media (min-width: 1025px) {
 
-    /*
-
-Mediaqueries para seccion "Do you have any questions " Desktop
-*/
+/* Mediaqueries para seccion "Do you have any questions " Desktop */
     .flex-horizontally {
         display: flex;
         flex-direction: row;

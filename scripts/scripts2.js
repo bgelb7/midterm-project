@@ -15,7 +15,7 @@ async function fetchContent (uuid) {
     let data = await content.json();
     const uniqueProject = data.find(function(project){
         return project.uuid === uuid;
-    })
+    });
     console.log(uniqueProject)
     document.getElementById("projects-height").innerHTML = uniqueProject.name;
     document.getElementById("project-description").innerHTML = uniqueProject.description;
@@ -31,7 +31,7 @@ async function fetchProjects() {
     console.log(data);
     data.sort(() => Math.random() - 0.5);
     console.log("data", data);
-    return data.slice(0, 3)
+    return data.slice(0, 3);
 }
 
 async function renderProjects() {

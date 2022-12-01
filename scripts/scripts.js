@@ -30,24 +30,13 @@ async function fetchProjects() {
 
 }
 
-
-
-
-
-
-
-
 //3.  Filtrar data con slice etc y obtener la info correcta 
-
-
 
 /*const fetchProjects = last3;
 last3 = data.reduce(function (accumulator, valor) {
 
     return last3
     console.log(sumWithInitial);
-
-
 });
 */
 

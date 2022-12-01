@@ -14,7 +14,7 @@
 
 <header>
     <div class="top-nav">
-        <img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" />
+        <a href="index.html"><img class="circle-logo" src="project-assets/logos/circle.svg" alt="Circle logo" /></a>
 
         <input id="menu-toggle" type="checkbox" />
         <label class='menu-button-container' for="menu-toggle">
@@ -24,8 +24,10 @@
 
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="project.html">Projects</a></li>
             <li><a href="#services">Services</a></li>
+            <li class="contact-only-mobile"><a href="contactus.html">Contact Us</a></li>
+
         </ul>
 
         <ul class="menu button-top-nav">
@@ -40,8 +42,8 @@
     <section class="hero">
         <div class="heroImgs">
             <img id="img1" src="./project-assets/hero-section/hero-image.png" alt="">
-            <img id="img2" src="./project-assets/hero-section/card-1.png" alt="">
-            <img id="img3" src="./project-assets/hero-section/card-2.png" alt="">
+            <img id="img2" class="fade-in-image" src="./project-assets/hero-section/card-1.png" alt="">
+            <img id="img3" class="fade-in-image" src="./project-assets/hero-section/card-2.png" alt="">
         </div>
         <div class="heroContent">
             <h1>Empower Your Business With Stunning Design!</h1>
@@ -55,7 +57,7 @@
     </section>
 
     <!-- Clients section -->
-    <section class="clients">
+    <section class="clients fade-in-image">
         <img src="./project-assets/logos/airbnb-logo.svg" alt="Airbnb">
         <img src="./project-assets/logos/google-logo.svg" alt="Google">
         <img src="./project-assets/logos/microsoft-logo.svg" alt="Microsoft">
@@ -171,7 +173,7 @@
 
         <div class="footerOuter">
             <div class="logoandText">
-                <img src="/project-assets/logos/circle.svg" alt="">
+                <a href="index.html"><img src="/project-assets/logos/circle.svg" alt=""></a>
                 <p class="headLinetextRegular">2972 Westheimer Rd. Santa Ana,</p>
                 <p class="headLinetextRegular"> Illinois 85486 </p>
             </div>

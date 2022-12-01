@@ -80,6 +80,7 @@ async function renderProjects() {
 
     let projectsWrap = document.querySelector('.projectsWrap');
     projectsWrap.innerHTML = html;
+    return projectsWrap;
 }
 
 renderProjects();

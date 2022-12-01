@@ -1,22 +1,38 @@
 
 //1.  on page load - haz algo 
-window.addEventListener("load", (event) => {
 
-    fetchProjects()
+
+window.addEventListener("load", async () => {
+
+    await renderProjects()
+
+
 
 });
 
 //2.  Promesa para devolver algo y devolverlo si existe como promesa
 
 
-const url = "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2";
+const url = "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2 ";
 
 async function fetchProjects() {
     let response = await fetch(url);
+
     let data = await response.json();
     console.log(data);
-    return data
+
+    data.sort((a, b) => {
+        return a.uuid - b.uuid;
+    });
+
+    console.log("data", data);
+    return data.slice(0, 3);
+
 }
+
+
+
+
 
 
 
@@ -25,15 +41,28 @@ async function fetchProjects() {
 
 
 
+/*const fetchProjects = last3;
+last3 = data.reduce(function (accumulator, valor) {
+
+    return last3
+    console.log(sumWithInitial);
+
+
+});
+*/
+
+
+document.querySelector
 
 //4.  Meter la info en la pagina en la orden requerida 
 
-/*async function renderProjects() {
-    let project = await fetchProjects();
+async function renderProjects() {
+    let projects = await fetchProjects();
     let html = '';
-    users.forEach(project => {
+    projects.forEach(project => {
+
         let htmlSegment = `<div class="project1">
-                            <img class= src="${image}" >
+                            <img src="${project.image}" >
                             
                             <div class='projectText'>
                             
@@ -41,7 +70,7 @@ async function fetchProjects() {
                             
                             <p class="headlinetextRegular">${project.description} </p>
                             
-                           <a class="headLinetextRegular" href="${project.UUID}"> learn more</a>
+                           <a class="headLinetextRegular" href="./project.html?uuid=${project.uuid}"> learn more</a>
                             
                             
                             </div>
@@ -54,14 +83,14 @@ async function fetchProjects() {
     projectsWrap.innerHTML = html;
 }
 
-renderUsers();
+renderProjects();
 
 
 
 
 // 
 
-const API_URL = "https://jsonplaceholder.typicode.com/posts";
+//const API_URL = "https://jsonplaceholder.typicode.com/posts";
 // const button = document.getElementById("check-news");
 // button.addEventListener("mouseleave", () => {
 //   alert("HOLA");
@@ -146,4 +175,4 @@ return filteredNoticias []
 
 const noticia = 
 
-// 
+*/

@@ -19,7 +19,9 @@ async function fetchProjects() {
     console.log("data", data);
     return data.slice(0, 4);
 
-    const random = data[Math.floor(Math.random())];
+    const random = data.sort
+    // Data sort y dentro en vez de a y b, poner random > 0> 5
+    data[Math.floor(Math.random())];
 
 }
 

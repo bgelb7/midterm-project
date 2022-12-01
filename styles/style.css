@@ -196,6 +196,8 @@ h4 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    z-index: 2;
+
 }
 
 .menu>li {
@@ -790,6 +792,8 @@ Mediaqueries para (para contactus pagina) IPAD
         padding-right: 100px;
         margin-top: 30px;
         margin-bottom: 10px;
+        position: relative;
+        z-index: 10;
     }
 }
 

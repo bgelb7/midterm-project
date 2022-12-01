@@ -1,35 +1,149 @@
-async function getProjects(project) {
 
-    let url = 'https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2';
-    try {
-        let promise1 = await fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2');
-        return await res.json();
-    } catch (error) {
-        console.log(error);
+//1.  on page load - haz algo 
+window.addEventListener("load", (event) => {
+
+    fetchProjects()
+
+});
+
+//2.  Promesa para devolver algo y devolverlo si existe como promesa
+
+
+const url = "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2";
+
+async function fetchProjects() {
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(data);
+    return data
+}
+
+
+
+
+//3.  Filtrar data con slice etc y obtener la info correcta 
+
+
+
+
+//4.  Meter la info en la pagina en la orden requerida 
+
+/*async function renderProjects() {
+    let project = await fetchProjects();
+    let html = '';
+    users.forEach(project => {
+        let htmlSegment = `<div class="project1">
+                            <img class= src="${image}" >
+                            
+                            <div class='projectText'>
+                            
+                            <h4 class="bodyIntrotextMedium"> ${project.name}  </h4>
+                            
+                            <p class="headlinetextRegular">${project.description} </p>
+                            
+                           <a class="headLinetextRegular" href="${project.UUID}"> learn more</a>
+                            
+                            
+                            </div>
+                        </div>`;
+
+        html += htmlSegment;
+    });
+
+    let projectsWrap = document.querySelector('.projectsWrap');
+    projectsWrap.innerHTML = html;
+}
+
+renderUsers();
+
+
+
+
+// 
+
+const API_URL = "https://jsonplaceholder.typicode.com/posts";
+// const button = document.getElementById("check-news");
+// button.addEventListener("mouseleave", () => {
+//   alert("HOLA");
+// });
+/**
+ * Fetch and return the posts
+ */
+/*async function fetchPosts(uuid) {
+    const result = await fetch(API_URL);
+    if (!result.ok) {
+        alert("Sorry! Ask the TA");
     }
-
-
-
-
-}
-
-
-
-function getProjects(project) {
-
-    let promise1 = fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects-v2')
-    promise1.then(function (response) {
-        console.log(response);
-    })
-}
-
-getProjects(project1)
-
-
-function validateForm() {
-    let x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
+    //   result.json().then(function (data) {
+    //     console.log(data);
+    //   });
+    const data = await result.json();
+    const filteredNoticias = data.filter(function (noticia) {
+        return noticia.id === uuid;
+    });
+    if (filteredNoticias.length === 0) {
+        // alert("PAGINA NO ENCONTRADA")
+        // redirect a 404
     }
+    return filteredNoticias[0];
 }
+/**
+ * Print posts in the div
+ *
+ * @param {array} posts
+ */
+/* function printPosts(posts) { }
+window.addEventListener("load", async () => {
+    //   const posts = await fetchPosts();
+    //   const top = topPosts(posts);
+    //   printPosts(top);
+    // 1. Obtener parámetro
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("noticia");
+    console.log(id);
+    const noticia = await fetchPosts(id);
+    printNoticia(noticia);
+});
+
+
+
+
+
+
+
+
+
+
+
+// to filter - use slice 
+
+
+
+
+// part 3 
+
+
+/*const params= new URLSearchParams(window.location.search);
+const id = params.get('myid') 
+console.log (params); 
+
+
+const data= await result.json ();
+
+const filterNoticias= data.filter (function(noticia))
+
+if (noticia.id=== uuid){
+return true
+
+
+if (filteredNoticias.length ===0){
+
+    // add 404 page redirect 
+}
+return filteredNoticias []
+}
+
+
+const noticia = 
+
+// 

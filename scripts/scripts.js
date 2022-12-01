@@ -60,7 +60,6 @@ async function renderProjects() {
     let projects = await fetchProjects();
     let html = '';
     projects.forEach(project => {
-
         let htmlSegment = `<div class="project1">
                             <img src="${project.image}" >
                             
